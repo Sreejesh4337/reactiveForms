@@ -1,28 +1,21 @@
 <form [formGroup]="myForm">
 
-  Value: {{myForm.value | json }}
-  <hr>
+  <!-- Value: {{myForm.value | json }} -->
 
-  <mat-form-field>
-    <input matInput placeholder="Email" formControlName="email">
-  </mat-form-field><br>
-
-  <div formArrayName="phones">
-    <div *ngFor="let phone of phoneForms.controls; let i=index" [formGroupName]="i">
+  <button mat-raised-button color="primary" (click)="addPhones()"><span class="material-icons">
+    add
+    </span>Add Components</button>
+  <div class="container" formArrayName="components" style="display: grid;">
+    <div class="row">
+    <div class="col-sm-4" *ngFor="let phone of phoneForms.controls; let i=index" [formGroupName]="i" style="padding-left: 10px;">
       <mat-form-field>
-        <input matInput formControlName="area" placeholder="area">
+        <label>Component {{i}}<span class="material-icons">
+          delete
+          </span></label>
+        <input matInput formControlName="component">
       </mat-form-field>
-
-      <mat-form-field>
-        <input matInput formControlName="prefix" placeholder="prefix">
-      </mat-form-field>
-
-      <mat-form-field>
-        <input matInput formControlName="line" placeholder="line">
-      </mat-form-field>
-
-      <button mat-raised-button color="warn" (click)="deleteForms(i)">Delete</button>
+      <button mat-raised-button color="warn" (click)="openDialog(i)">Delete</button>
     </div>
   </div>
-<button mat-raised-button color="primary" (click)="addPhones()">Add Phone Number</button>
+  </div>
   </form>

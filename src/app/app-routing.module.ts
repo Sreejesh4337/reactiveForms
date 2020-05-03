@@ -10,7 +10,7 @@ const routes: Routes = [
   {
     path: '',
     pathMatch: 'full',
-    component: BasicFormsComponent
+    component: ArrayFormsComponent
   },
   {
     path: 'nested',

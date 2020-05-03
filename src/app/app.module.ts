@@ -12,6 +12,7 @@ import { SubmitFormsComponent } from './components/submit-forms/submit-forms.com
 
 import { ReactiveFormsModule } from '@angular/forms';
 import { PmMaterialModule } from './material-module';
+import { DialogeExampleComponent } from './dialoge-example/dialoge-example.component';
 
 @NgModule({
   declarations: [
@@ -20,8 +21,10 @@ import { PmMaterialModule } from './material-module';
     NestedFormsComponent,
     ArrayFormsComponent,
     ValidationFormsComponent,
-    SubmitFormsComponent
+    SubmitFormsComponent,
+    DialogeExampleComponent
   ],
+  entryComponents: [DialogeExampleComponent],
   imports: [
     BrowserModule,
     AppRoutingModule,
