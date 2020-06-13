@@ -1,3 +1,5 @@
+import { BigCityTaskComponent } from './components/big-city-task/big-city-task.component';
+import { SideNavComponent } from './components/side-nav/side-nav.component';
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 import { BasicFormsComponent } from './components/basic-forms/basic-forms.component';
@@ -8,9 +10,14 @@ import { SubmitFormsComponent } from './components/submit-forms/submit-forms.com
 
 const routes: Routes = [
   {
+    path: 'bigcity',
+    pathMatch: 'full',
+    component: BigCityTaskComponent
+  },
+  {
     path: '',
     pathMatch: 'full',
-    component: ArrayFormsComponent
+    component: SideNavComponent
   },
   {
     path: 'nested',

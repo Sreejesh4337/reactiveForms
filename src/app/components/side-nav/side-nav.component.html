@@ -1,0 +1,123 @@
+<mat-sidenav-container class="example-container" *ngIf="shouldRun">
+    <mat-sidenav #sidenav [mode]="mode.value">
+        <div class="scrollbar" id="style-2">
+            <div class="force-overflow">
+      <p><button mat-button (click)="sidenav.toggle()">
+          <mat-icon class="ui-mat-btn">arrow_left</mat-icon>
+      </button></p>
+      <div class="ui-circ">
+      <span class="circular-class">
+        <circle-progress
+            [percent]="95"
+            [outerStrokeWidth]="16"
+            [animation]="true"
+            [animationDuration]="300"
+        ></circle-progress>
+      </span>
+      </div>
+
+      <div class="container">
+        <div class="row">
+          <div class="col-6 col-sm-3 ui-nex">
+            <span> Get started with nexquare </span><br>
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="col-6 col-sm-3 ui-nex-21">
+              <span class="ui-minutes"> 21 minutes to go! </span><br>
+           </div>
+        </div>
+
+        <div class="row">
+          <div class="col-6 col-sm-3 ui-sidenav-br">
+            <div class="ui-signup-class">
+              <img src="../../../assets/group.png" class="ui-sidebar-img">
+                <span class="ui-sidenav-sign">Sign up to Nexquare</span>
+                  <img src="../../../assets/group-tick.png" class="ui-sidebar-img">
+            </div>
+          </div>
+        </div>
+
+        <div class="row">
+            <div class="col-6 col-sm-3">
+                <mat-accordion>
+                    <mat-expansion-panel>
+                      <mat-expansion-panel-header>
+                        <mat-panel-title>
+                          <img src="../../../assets/group-student.png" class="ui-sidebar-nav-img">
+                            School Definitions
+                        </mat-panel-title>
+                      </mat-expansion-panel-header>
+                       <ul class="ui-ul">
+                           <li> School Profile Settings</li>
+                           <li> Academic year Details </li>
+                           <li> Register Number Patterns</li>
+                           <li> Phase Year Group  Session</li>
+                           <li> Add Holidays</li>
+                           <li> Fix Weekends</li>
+                           <li> Class Structure</li>
+                       </ul>
+                    </mat-expansion-panel>
+
+                    <mat-expansion-panel>
+                        <mat-expansion-panel-header>
+                          <mat-panel-title>
+                              Staff Profile Settings
+                          </mat-panel-title>
+                        </mat-expansion-panel-header>
+                        <ul class="ui-ul">
+                            <li> Role Creation</li>
+                            <li> Staff Field Configuration</li>
+                            <li> Staff Data Upload</li>
+                            <li> Supervisor Allocation</li>
+                        </ul>
+                      </mat-expansion-panel>
+
+                      <mat-expansion-panel>
+                        <mat-expansion-panel-header>
+                          <mat-panel-title>
+                              Student Profile Upload
+                          </mat-panel-title>
+                        </mat-expansion-panel-header>
+                        <ul class="ui-ul">
+                            <li>Student Data Upload</li>
+                            <li>Student Field Configuration</li>
+                            <li>Profile picture upload</li>
+                            <li></li>
+                        </ul>
+                      </mat-expansion-panel>
+
+                      <mat-expansion-panel>
+                        <mat-expansion-panel-header>
+                          <mat-panel-title>
+                              Allocations
+                          </mat-panel-title>
+                        </mat-expansion-panel-header>
+                        <ul class="ui-ul">
+                            <li>Subject Master</li>
+                            <li>Class to Subject Allocation</li>
+                            <li>Optional Subject Allocation</li>
+                            <li>Subject Teacher Allocation</li>
+                        </ul>
+                      </mat-expansion-panel>
+                </mat-accordion>
+             </div>
+          </div>
+      </div>
+      </div>
+</div>
+    </mat-sidenav>
+  
+    <mat-sidenav-content>
+      <p><button mat-button (click)="sidenav.toggle()">
+          <mat-icon class="">arrow_right</mat-icon>
+      </button></p>
+      
+    </mat-sidenav-content>
+  </mat-sidenav-container>
+  
+  
+  <!-- Copyright 2019 Google LLC. All Rights Reserved.
+      Use of this source code is governed by an MIT-style license that
+      can be found in the LICENSE file at http://angular.io/license -->

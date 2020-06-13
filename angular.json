@@ -122,5 +122,8 @@
       }
     }
   },
-  "defaultProject": "reactiveForms"
+  "defaultProject": "reactiveForms",
+  "cli": {
+    "analytics": false
+  }
 }

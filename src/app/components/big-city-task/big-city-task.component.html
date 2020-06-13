@@ -1,0 +1,30 @@
+<div class="ui-container">
+  <div class="ui-customer">
+    <span class="ui-sub-list"> Customer Id: </span><span> {{ validDataResponse.data?.customer_id }} </span><br>
+    <span class="ui-sub-list"> Total Scored:</span> {{ validDataResponse.data?.you_scored }}
+  </div>
+<mat-accordion>
+    <mat-expansion-panel *ngFor="let scoreResponse of scoreResponse; let i=index">
+      <mat-expansion-panel-header style="background: bisque;">
+        <mat-panel-title>
+          Match: <span style="font-weight: bold;"> {{ scoreResponse.topic }} </span>
+        </mat-panel-title>
+        <mat-panel-description>
+          Date:  <span style="font-weight: bold;">{{ scoreResponse.date | date:'mediumDate' }}</span> 
+          <span class="ui-desc"> Score: {{ scoreResponse.total_score }}</span>
+        </mat-panel-description>
+      </mat-expansion-panel-header>
+      <mat-card> 
+        <div class="ui-match-style">
+          <span> Match Id: </span> <span class="ui-match"> {{ scoreResponse.match_id }}
+          </span>
+        </div>
+        <ul>
+          <li class="ui-list" *ngFor="let res of scoreResponse.question_answers">
+            <span class="ui-list-style"> Question: </span>{{ res.questions }} <span class="ui-list-style">Points: </span>{{ res.points}}
+          </li>
+        </ul>
+      </mat-card>
+    </mat-expansion-panel>
+  </mat-accordion>
+  </div>
