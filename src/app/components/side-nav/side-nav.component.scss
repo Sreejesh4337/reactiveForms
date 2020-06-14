@@ -14,7 +14,7 @@
   }
   
   ::ng-deep .mat-drawer {
-    width: 257px;
+    width: 287px;
   }
 
   .circular-class {
@@ -106,7 +106,7 @@
 
   .ui-mat-btn {
     position: absolute;
-    left: 341.39%;
+    left: 383.39%;
     right: 7.16%;
     top: 1.99%;
     bottom: 95.33%;
@@ -152,7 +152,7 @@
 }
 
 .ui-signup-class {
-  background: #5FE0C7;
+  background: #5fe0c761;
   mix-blend-mode: normal;
   // opacity: 0.1;
   border-radius: 24px;
@@ -185,4 +185,9 @@
     margin-left: -21px;
     width: 22px;
     margin-right: 12px;
+}
+
+.ui-sidebar-img-style {
+  transform: translate(43px, 6px);
+  color: #5FE0C7;
 }
